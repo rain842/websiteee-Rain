@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEBSITE TUTORIAL RAIN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Website Tutorial</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="home" class="intro">
+      <h2>Selamat Datang di Website Tutorial RaIn</h2>
+      
+    </section>
+
+    <section id="steps" class="steps">
+      <h2>Tutorial Membuat Akun BriMo</h2>
+      <div>
+        <img src="OIP (2).jpg" />
+      </div>
+      <ol>
+
+		<h3>Langkah-Langkah</h3>
+        <li>Download Aplikasi BriMo di App Store</li>
+        <li>Buka Aplikasi BriMo</li>
+        <li>Pilih Menu "Belum Punya Akun BriMo"</li>
+        <li>Jika Anda Sudah Memiliki Akun Bri,pilih "Ya, Saya Punya Rekening BRI"</li>
+        <li>Siapkan Dokumen Yang diperlukan </li>
+        <li>Klik "Daftar BriMo"</li>
+        <li>Ambil Foto KTP</li>
+        <li>Cek Data Diri</li>
+        <li>Verifikasi Nomor Handphone Yang Dikirim Melalui SMS Atau Whatshapp</li>
+        <li>Verifikasi Email</li>
+        <li>Lakukan Perekaman Wajah Sesuai Instruksi</li>
+        <li>Buat User Name Dan Password BriMo</li>
+        <li>Buat Pin BriMo</li>
+        <li>Pendaftaran Berhasil</li>
+      </ol>
+    </section>
+
+    <section id="tips" class="tips">
+      <ul>
+		<h3>Tips Aman</h3>
+        <li>Gunakan Jaringan Internet Yang Aman,Hindari Wifi Publik</li>
+        <li>Buat User Id Dan Password Yang Kuat Dengan Menggunakan Kombinasi Yang Tidak Mudah Untuk Ditebak</li>
+        <li>Rahasiakan User Id,Password,Dan PIN</li>
+        <li>Ubah Password Dan PIN Secara Teratur</li>
+        <li>Periksa Mutasi Rekening Secara Rutin</li>
+        <li>Aktifkan SMS Notifikasi Di Kantor Bri Terdekat</li>
+      </ul>
+    </section>
+
+	<section id="steps" class="steps">
+		<h2>Tutorial Membuat Akun Dana</h2>
+    <div>
+      <img src="OIP (1).jpg" />
+    </div>
+		<ol>
+		  <h3>Langkah-Langkah</h3>
+		  <li>Download dan install Aplikasi Dana</li>
+		  <li>Buka Aplikasi Dan</li>
+		  <li>Registrasi Akun Baru</li>
+		  <li>Verifikasi Nomor Baru</li>
+      <li>Isi Data Pribadi</li>
+		  <li>Buat Pin Dana</li>
+		  <li>Aktifasi Akun</li>
+		  <li>Verifikasi KTP</li>
+      <li>Mulai Menggunakan Dana</li>
+		</ol>
+	  </section>
+
+    <section id="tips" class="tips">
+      <ul>
+		<h3>Tips Aman</h3>
+        <li>Aktifkan Fitur Keamanan Tambahan</li>
+        <li>Jaga Kerahasiaan PIN</li>
+        <li>Priksa Transaksi Secara Berkala</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Kontak Kami</h2>
+      <p>Jika Anda memiliki pertanyaan, silakan hubungi kami di:</p>
+      <p>Email: kadekintan2555@gmail.com</p>
+      <p>Telepon:+6281244080200</p>
+    </section>
+  </main>
+  Ini adalah konten artikel yang menarik. Bacalah dan berikan reaksi Anda!
+</p>
+
+<div class="reaction-buttons">
+  <button onclick="addReaction('like')">👍 Suka</button>
+  <button onclick="addReaction('dislike')">👎 Tidak Suka</button>
+  <button onclick="toggleCommentSection()">💬 Komentar</button>
+</div>
+
+<div class="comments-section" id="comments-section" style="display: none">
+  <h3>Komentar</h3>
+  <input type="text" id="comment-input" placeholder="Tulis komentar..." />
+  <button onclick="addComment()">Kirim</button>
+  <div id="comments-list"></div>
+</div>
+
+<script>
+let likeCount = 0;
+  let dislikeCount = 0;
+
+  function addReaction(type) {
+    if (type === "like") {
+      likeCount++;
+      alert("Anda menyukai artikel ini! Total suka: " + likeCount);
+    } else if (type === "dislike") {
+      dislikeCount++;
+      alert(
+        "Anda tidak menyukai artikel ini! Total tidak suka: " + dislikeCount
+        );
+				}
+			}
+
+			function toggleCommentSection() {
+				const commentsSection = document.getElementById("comments-section");
+				commentsSection.style.display =
+					commentsSection.style.display === "none" ? "block" : "none";
+			}
+
+			function addComment() {
+				const commentInput = document.getElementById("comment-input");
+				const commentsList = document.getElementById("comments-list");
+
+                if (commentInput.value.trim() !== "") {
+					const newComment = document.createElement("div");
+					newComment.className = "comment";
+					newComment.textContent = commentInput.value;
+					commentsList.appendChild(newComment);
+					commentInput.value = ""; // Clear input
+				} else {
+					alert("Komentar tidak boleh kosong!");
+				}
+			}
+		</script>
+	</body>
+</html>
+
+  <footer>
+    <p>&copy; 2025 WebSite Tutorial</p>
+  </footer>
+</body>
+</html>
